@@ -37,9 +37,9 @@ function getIssuesPageHtml(url, topic, repoName) {
     }
 }
 module.exports = getIssuesPageHtml;
-function dirCreater(folderpath) {
-    if (fs.existsSync(folderpath) == false) {
-        fs.mkdirSync(folderpath);
+function dirCreater(folderPath) {
+    if (!fs.existsSync(folderPath)) {
+        fs.mkdirSync(folderPath, { recursive: true });
     }
 }
 
