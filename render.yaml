@@ -3,4 +3,5 @@ services:
     name: my-node-worker
     env: node
     buildCommand: "npm install"
-    startCommand: "npm start"
+    startCommand: "npm start",
+    port: 3000
