@@ -18,7 +18,8 @@ function getReposPageHtml(url, topic) {
         let headingsArr = $(".f3.color-fg-muted.text-normal.lh-condensed");
         for (let i = 0; i < 8; i++) {
             let twoAnchors = $(headingsArr[i]).find("a");
-            let link = $(twoAnchors[1]).attr("href");
+            let link = $(twoAnchors[1]).attr("href");+
+            consolr.log("linkkkkkk", link);    
             let fullLink = `https://github.com${link}/issues`;
             let repoName = link.split("/").pop();
             getIssuesPageHtml(fullLink, topic,repoName);
