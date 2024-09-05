@@ -31,7 +31,6 @@ function getTopicLinks(html) {
         let href = $(linkElemArr[i]).attr("href");
         let topic = href.split("/").pop();
         let fullLink = `https://github.com/${href}`;
-        console.log("topic",linkElemArr,href,topic,fullLink);
         getReposPageHtml(fullLink, topic);
 
     }
