@@ -31,12 +31,13 @@ function getTopicLinks(html) {
         let href = $(linkElemArr[i]).attr("href");
         let topic = href.split("/").pop();
         let fullLink = `https://github.com/${href}`;
+        console.log("topic",linkElemArr,href,topic,fullLink);
         getReposPageHtml(fullLink, topic);
 
     }
 
 }
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port,() => {
     console.log(`Server is running on port ${port}`);
 });
